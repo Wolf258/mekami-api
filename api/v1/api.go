@@ -62,16 +62,17 @@ type ModuleInfo struct {
 // The ingest pipeline writes it as-is to the SQLite store; nothing
 // in the result struct is language-specific.
 type ParseResult struct {
-	RelPath    string
-	Lang       string
-	ModuleID   string
-	PackageID  string
-	DirRel     string
-	Hash       string
-	Mtime      int64
-	Size       int64
-	Symbols    []Symbol
-	Refs       []Ref
+	RelPath     string
+	Lang        string
+	ModuleID    string
+	PackageID   string
+	PackageName string
+	DirRel      string
+	Hash        string
+	Mtime       int64
+	Size        int64
+	Symbols     []Symbol
+	Refs        []Ref
 }
 
 // SymbolKind is a stable lower-case identifier for the role a symbol
